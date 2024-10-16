@@ -17,7 +17,11 @@
 
 ## Description
 
-This script aims to manage WireGuard VPN tunnels on a host that often needs to switch VPN because `wg-quick <up/down> wg-qucik@<if>.service` takes too much time 🕰️. The only thing you have to do is manage your list of VPN tunnels in `vpn_config.sh`: 
+This script aims to manage WireGuard VPN tunnels on a host that often needs to switch VPN because `wg-quick <up/down> wg-qucik@<if>.service` takes too much time 🕰️. The only thing you have to do is manage your list of VPN tunnels in `vpn_config.sh`.
+
+<div align="center">
+  <img src="images/usage.png" alt="usage">
+</div>
 
 ## Installation 
 1. Clone the repository into `/opt`  
