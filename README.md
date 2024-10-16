@@ -42,7 +42,7 @@ sudo touch /opt/wg-manager/vpn_config.sh && sudo chmod 711 /opt/wg-manager/vpn_c
 ```
 5. Add your VPN list array in `vpn_config.sh`
 ```bash
-bash -c 'cat << EOF > /opt/wg-manager/vpn_config.sh
+sudo bash -c 'cat << EOF > /opt/wg-manager/vpn_config.sh
 #!/bin/bash
 
 declare -A VPNS=(
