@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+declare -A VPNS
+
+CONFIG_FILES=(
+    "/home/user/Documents/homelab.conf"
+    "/etc/wireguard/work-vpn.conf"
+    "/root/Downloads/external-vpn.conf"
+)
+
+INDEX=1
+for CONFIG in "${CONFIG_FILES[@]}"; do
+    VPN_NAME=$(basename "$CONFIG" .conf)
+    VPNS["$INDEX"]="$VPN_NAME:$CONFIG"
+    ((INDEX++))
+done

@@ -43,14 +43,22 @@ sudo touch /opt/wg-manager/vpn_config.sh && sudo chmod 711 /opt/wg-manager/vpn_c
 5. Add your VPN list array in `vpn_config.sh`
 ```bash
 bash -c 'cat << EOF > /opt/wg-manager/vpn_config.sh
-#!/bin/bash
+#!/usr/bin/env bash
 
-declare -A VPNS=(
-    ["1"]="wg0:/etc/wireguard/wg0.conf"
-    ["2"]="company-internal:/home/user/Documents/company-internal.conf"
-    ["3"]="homelab:/etc/wireguard/homelab.conf"
-    #["4"]="foo:/bar/foo.conf"
+declare -A VPNS
+
+CONFIG_FILES=(
+    "/home/user/Documents/homelab.conf"
+    "/etc/wireguard/work-vpn.conf"
+    "/root/Downloads/external-vpn.conf"
 )
+
+INDEX=1
+for CONFIG in "${CONFIG_FILES[@]}"; do
+    VPN_NAME=$(basename "$CONFIG" .conf)
+    VPNS["$INDEX"]="$VPN_NAME:$CONFIG"
+    ((INDEX++))
+done
 EOF'
 ```
 
