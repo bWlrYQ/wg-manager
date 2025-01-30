@@ -9,9 +9,9 @@
   <p align="center">
     A simple shell script that allows you to manage all your WireGuard VPN tunnels in one place.
     <br />
-    <a href="https://github.com/bWlrYQ/wg-manage/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/bWlrYQ/wg-manager/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/bWlrYQ/wg-manage/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/bWlrYQ/wg-manager/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
